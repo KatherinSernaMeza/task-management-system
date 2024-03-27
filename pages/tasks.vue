@@ -1,5 +1,7 @@
 <template>
-  <v-row> </v-row>
+  <v-row>
+    <h1>View tasks</h1>
+  </v-row>
 </template>
 
 <script>
