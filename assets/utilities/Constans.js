@@ -7,10 +7,22 @@
 
 export const TITLES = {
   HOME: "HOME",
-  TASK: "VIEW TAKS",
+  TASKS: "LIST TAKS",
+  TASK: "VIEW TASK",
   CREATE: "CREATE TASK",
   EDIT_TASK: "EDIT TASK",
 };
+
+export const SUBTITLES = {
+  taskDescription: "Description:",
+  taskComments: "Comments",
+  taskTitle: "Title",
+  taskDueDate: "Due date",
+  taskDescription: "Description",
+  taskcreated: "Created at",
+  taskUpdatedAt: "updated at",
+};
+
 export const LIST_TASK = {
   ID: "Id:",
   TITLE: "Title :",

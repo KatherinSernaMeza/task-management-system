@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <h1>{{ TITLES.TASK }}</h1>
+      <h1>{{ TITLES.TASKS }}</h1>
       <AtomsTaskList />
     </v-col>
   </v-row>

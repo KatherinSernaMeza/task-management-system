@@ -12,3 +12,13 @@
 export const getTasks = async (axios) => {
   return await axios.$get("/tasks");
 };
+
+/**
+ * Exports the getTaskDetails function which makes a GET request to fetch details tasks.
+ * @param {Object} axios - Axios instance to make the HTTP request.
+ * @param {Number} id - Task ID to display.
+ * @returns {Promise<Array>} A promise that resolves with an Array of task
+ */
+export const getTaskDetails = async (axios, id) => {
+  return await axios.$get(`/tasks/${id}`);
+};

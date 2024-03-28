@@ -5,7 +5,7 @@
         tag="v-list-item"
         v-for="task in tasks"
         :key="task.id"
-        :to="'/task/' + task.id"
+        :to="'/taskDetails/' + task.id"
       >
         <v-list-item-content>
           <v-list-item-subtitle>
