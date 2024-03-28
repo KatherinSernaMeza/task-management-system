@@ -1,9 +1,16 @@
 <template>
-  <h1>View Task</h1>
+  <h1>{{ TITLES.HOME }}</h1>
 </template>
 
 <script>
-export default {};
+import { TITLES } from "../../assets/utilities/Constans";
+export default {
+  data() {
+    return {
+      TITLES,
+    };
+  },
+};
 </script>
 
 <style></style>

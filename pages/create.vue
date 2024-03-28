@@ -1,9 +1,16 @@
 <template>
-  <h1>Create task</h1>
+  <h1>{{ TITLES.CREATE }}</h1>
 </template>
 
 <script>
-export default {};
+import { TITLES } from "../assets/utilities/Constans";
+export default {
+  data() {
+    return {
+      TITLES,
+    };
+  },
+};
 </script>
 
 <style></style>

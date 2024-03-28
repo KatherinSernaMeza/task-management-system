@@ -1,11 +1,20 @@
 <template>
   <v-row>
-    <h1>View tasks</h1>
+    <v-col>
+      <h1>{{ TITLES.TASK }}</h1>
+      <AtomsTaskList />
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import { TITLES } from "../assets/utilities/Constans";
 export default {
   name: "InspirePage",
+  data() {
+    return {
+      TITLES,
+    };
+  },
 };
 </script>

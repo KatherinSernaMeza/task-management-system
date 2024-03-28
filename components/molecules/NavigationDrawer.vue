@@ -6,14 +6,12 @@
     fixed
     app
   >
-    <List :items="items" />
+    <AtomsNavList :items="items" />
   </v-navigation-drawer>
 </template>
 
 <script>
-import List from "../atoms/List.vue";
 export default {
-  components: { List },
   props: {
     items: Array,
     drawer: Boolean,
