@@ -29,3 +29,15 @@ export const LIST_TASK = {
   COMPLETED: "Completed :",
   DUE_DATE: "Due date:",
 };
+
+export const FORM_TASK_INPUT = {
+  title: "Title",
+  completed: "Completed",
+  title: "Title",
+  dueDate: "Due Date",
+  comments: "Comments",
+  description: "Description",
+  tags: "Add Tags",
+  createdAt: "Created at",
+  updatedAt: "Updated at",
+};

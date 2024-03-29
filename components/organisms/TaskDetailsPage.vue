@@ -36,6 +36,7 @@ export default {
       textChip: ["Peliculas", "casos reales", "terror"],
     };
   },
+  name: "taskDetailsPage",
   /**
    * Props of the task details page component
    * @typedef {Object} Props

@@ -13,6 +13,11 @@
 
 <script>
 export default {
+  /**
+   * NavList component.
+   * Atom component to display list of navs.
+   * @component NavList
+   */
   props: {
     items: Array,
   },

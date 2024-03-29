@@ -7,7 +7,12 @@
 <script>
 import { TITLES } from "../assets/utilities/Constans";
 export default {
-  name: "IndexPage",
+  /**
+   * Main component for Home layout.
+   * Here the main structure used in home.
+   * @component home
+   */
+  name: "home",
   data() {
     return {
       TITLES,

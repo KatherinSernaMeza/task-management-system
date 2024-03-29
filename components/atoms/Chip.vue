@@ -13,8 +13,9 @@ export default {
   /**
    * Chip component.
    * Atom component to reuse chip component.
-   * @component MyComponent
+   * @component Chip
    */
+  name: "chip",
   data() {
     return {
       hasIcon: false,

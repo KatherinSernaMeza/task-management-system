@@ -8,6 +8,11 @@
 
 <script>
 export default {
+  /**
+   * Molecule component AppBar.
+   * @component AppBar
+   */
+  name: "AppBar",
   props: {
     title: String,
     drawer: Boolean,
@@ -22,6 +27,7 @@ export default {
     this.localDrawer = this.drawer;
   },
   methods: {
+    //Handle open/close nav
     handleDrawer() {
       this.localDrawer = !this.localDrawer;
       this.$emit("drawer-emit", this.localDrawer);

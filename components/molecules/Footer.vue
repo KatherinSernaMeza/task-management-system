@@ -5,7 +5,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  /**
+   * Molecule component footer.
+   * @component footer
+   */
+  name: "footer",
+};
 </script>
 
 <style></style>

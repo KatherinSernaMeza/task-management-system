@@ -13,5 +13,9 @@ export default function ({ $axios }) {
   //Alter a request before it is transmitted or to modify a response before it is delivered to callbacks.
   $axios.onRequest((config) => {
     $axios.setToken(process.env.BEARER_TOKEN, "Bearer");
+    // Adds header: `Content-Type: application/x-www-form-urlencoded` to only post & put requests
+    if (config.method == "post" || config.method == "put") {
+      config.headers["Content-Type"] = "application/x-www-form-urlencoded";
+    }
   });
 }

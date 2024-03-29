@@ -49,7 +49,7 @@ import { TITLES, SUBTITLES } from "../../assets/utilities/Constans";
 export default {
   /**
    * Molecule component to display task details.
-   * @component MyComponent
+   * @component taskDetailsCard
    */
   name: "taskDetailsCard",
   data() {

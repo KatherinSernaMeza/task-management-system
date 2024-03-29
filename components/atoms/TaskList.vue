@@ -2,6 +2,7 @@
   <v-container>
     <v-list>
       <nuxt-link
+        class="ma-2"
         tag="v-list-item"
         v-for="task in tasks"
         :key="task.id"
@@ -11,8 +12,8 @@
           <v-list-item-subtitle>
             {{ LIST_TASK.ID }} {{ task.id }}</v-list-item-subtitle
           >
-          <v-list-item-title
-            >Title: {{ LIST_TASK.TITLE }} {{ task.title }}</v-list-item-title
+          <v-list-item-title>
+            {{ LIST_TASK.TITLE }} {{ task.title }}</v-list-item-title
           >
           <v-list-item-subtitle>
             {{ LIST_TASK.COMPLETED }}
@@ -25,10 +26,13 @@
         <v-list-item-action
           style="display: flex; flex-direction: row; align-items: center"
         >
-          <v-btn icon @click.stop="editTask(task)">
-            <v-icon>mdi-pencil</v-icon>
-          </v-btn>
-          <v-btn icon @click.stop="deleteTask(task)">
+          <nuxt-link :to="'/task/' + task.id">
+            <v-btn icon>
+              <v-icon>mdi-pencil</v-icon>
+            </v-btn>
+          </nuxt-link>
+
+          <v-btn icon @click.stop="deleteTaskById(task.id)">
             <v-icon>mdi-delete</v-icon>
           </v-btn>
         </v-list-item-action>
@@ -38,10 +42,15 @@
 </template>
 
 <script>
-import { getTasks } from "~/services/tasks";
+import { getTasks, deleteTask } from "~/services/tasks";
 import { LIST_TASK } from "../../assets/utilities/Constans";
-// Component to display list of tasks
 export default {
+  /**
+   * TaskList component.
+   * Atom component  to display list of tasks.
+   * @component TaskList
+   */
+  name: "taskList",
   data() {
     return {
       tasks: [],
@@ -55,13 +64,10 @@ export default {
       this.selectedTask = task;
       this.dialog = true;
     },
-    editTask(task) {
-      // Logic for editing the task
-      console.log("Edit task:", task);
-    },
-    deleteTask(task) {
+    async deleteTaskById(id) {
       // Logic for deleting the task
-      console.log("Delete task:", task);
+      const res = await deleteTask(this.$axios, id);
+      await this.getTasks();
     },
     async getTasks() {
       // Method to get list of tasks

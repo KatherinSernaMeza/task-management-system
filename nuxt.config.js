@@ -43,6 +43,11 @@ export default {
     baseURL: "https://ecsdevapi.nextline.mx/vdev/tasks-challenge", // URL base del servidor
   },
 
+  loading: {
+    color: "blue",
+    height: "50px",
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
