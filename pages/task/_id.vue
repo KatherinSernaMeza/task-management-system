@@ -1,9 +1,19 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <v-card class="pa-6 mx-lg-auto">
-          <h1>{{ TITLES.EDIT_TASK }}</h1>
+      <v-col
+        class="pa-6 mx-lg-auto"
+        xxl="6"
+        xl="6"
+        lg="8"
+        md="12"
+        sm="12"
+        xs="12"
+        cols="12"
+      >
+        <div class="primary">..</div>
+        <v-card class="pl-12 pr-12 pt-6 pb-6">
+          <h1 class="mx-lg-auto">{{ TITLES.EDIT_TASK }}</h1>
           <OrganismsTaskForm
             :isLoading="isLoading"
             :task="task"

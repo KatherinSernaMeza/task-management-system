@@ -1,27 +1,29 @@
 <template>
-  <v-form @submit.prevent @keyup.enter.prevent>
+  <v-form class="pt-6" @submit.prevent @keyup.enter.prevent>
     <v-row>
-      <v-col cols="12">
-        <AtomsTextField
-          :title="formData.title"
-          :label="FORM_TASK_INPUT.title"
-          @update:title="updateTitle"
-        />
-      </v-col>
-      <v-col cols="12">
-        <AtomsCheckBox
-          :completed="formData.is_completed"
-          @update:completed="updateCompleted"
-          :label="FORM_TASK_INPUT.completed"
-        />
-      </v-col>
-      <v-col cols="12">
+      <v-row class="mx-lg-auto justify-space-between">
+        <v-col cols="8">
+          <AtomsTextField
+            :title="formData.title"
+            :label="FORM_TASK_INPUT.title"
+            @update:title="updateTitle"
+          />
+        </v-col>
+        <v-col cols="3">
+          <AtomsCheckBox
+            :completed="formData.is_completed"
+            @update:completed="updateCompleted"
+            :label="FORM_TASK_INPUT.completed"
+          />
+        </v-col>
+      </v-row>
+      <!-- <v-col cols="12">
         <AtomsDatePicker
           :completed="formData.due_date"
           @update:dueDate="updateDueDate"
           :label="FORM_TASK_INPUT.dueDate"
         />
-      </v-col>
+      </v-col> -->
       <v-col cols="12">
         <v-text-field
           v-model="formData.due_date"
@@ -57,12 +59,19 @@
         ></v-textarea>
       </v-col>
     </v-row>
-    <v-btn @click="onSubmit({ ...formData })" color="primary">Guardar</v-btn>
+
+    <v-btn
+      block
+      @click="onSubmit({ ...formData })"
+      color="primary"
+      size="x-large"
+      >{{ BUTTON.create }}</v-btn
+    >
   </v-form>
 </template>
 
 <script>
-import { FORM_TASK_INPUT } from "../../assets/utilities/Constans";
+import { FORM_TASK_INPUT, BUTTON } from "../../assets/utilities/Constans";
 export default {
   /**
    * Molecule component to display Form task.
@@ -94,6 +103,7 @@ export default {
       tagInput: "", // Input field for adding tags
       tagsArray: this.task.tags.length ? this.task.tags.split(",") : [], // Arreglo para almacenar los tags ingresados
       FORM_TASK_INPUT,
+      BUTTON,
     };
   },
   methods: {

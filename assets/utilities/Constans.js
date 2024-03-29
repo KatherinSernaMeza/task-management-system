@@ -6,21 +6,22 @@
 //------------------------------------------------------------------------------
 
 export const TITLES = {
-  HOME: "HOME",
-  TASKS: "LIST TAKS",
+  HOME: "Organize your work and your life, finally.",
+  TASKS: "LIST TASKS",
   TASK: "VIEW TASK",
   CREATE: "CREATE TASK",
   EDIT_TASK: "EDIT TASK",
 };
 
 export const SUBTITLES = {
+  home: "Focus, organize, and bring calm to your life with Todolist. The world's number 1 app for lists and task management",
   taskDescription: "Description:",
   taskComments: "Comments",
   taskTitle: "Title",
   taskDueDate: "Due date",
   taskDescription: "Description",
   taskcreated: "Created at",
-  taskUpdatedAt: "updated at",
+  taskUpdatedAt: "Updated at",
 };
 
 export const LIST_TASK = {
@@ -40,4 +41,9 @@ export const FORM_TASK_INPUT = {
   tags: "Add Tags",
   createdAt: "Created at",
   updatedAt: "Updated at",
+};
+
+export const BUTTON = {
+  save: "Save",
+  create: "Create",
 };

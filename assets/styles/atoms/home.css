@@ -1,0 +1,11 @@
+.background-image {
+  background-image: url("~/assets/home.jpg");
+  background-size: contain; /* Ajusta el tamaño de la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  height: 75vh; /* Ajusta la altura de la imagen de fondo al 100% del viewport */
+}
+.subtitle {
+  position: relative;
+  z-index: 3;
+  top: 39px;
+}

@@ -1,6 +1,6 @@
 <template>
   <p v-if="isLoading">Cargando...</p>
-  <v-row v-else class="mb-6" justify="center">
+  <v-row v-else class="mb-6 ml-1 mr-1" justify="center">
     <MoleculesForm :task="task" :onSubmit="onSubmit" />
   </v-row>
 </template>
